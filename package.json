@@ -3,7 +3,13 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"preinstall": "rm -rf typings",
+		"postinstall": "node node_modules/typings/dist/bin.js install",
 		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"android": "node node_modules/react-native/local-cli/cli.js run-android",
+		"ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+		"prebuild": "rm -rf build",
+		"build": "tsc",
 		"test": "jest"
 	},
 	"dependencies": {
@@ -14,7 +20,12 @@
 		"babel-jest": "21.2.0",
 		"babel-preset-react-native": "4.0.0",
 		"jest": "21.2.1",
-		"react-test-renderer": "16.0.0-alpha.12"
+		"react-test-renderer": "16.0.0-alpha.12",
+		"tslint": "^5.7.0",
+		"typescript": "^2.5.3",
+		"typings": "^2.1.1",
+		"@types/react": "^16.0.14",
+		"@types/react-native": "^0.49.2"
 	},
 	"jest": {
 		"preset": "react-native"
