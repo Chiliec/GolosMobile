@@ -27,7 +27,7 @@ export default class GolosMobile extends Component<Props, State> {
                 <Text style={styles.text}>
                     Добро пожаловать в Golos!
                 </Text>
-                <Image source={require('./golos_logo.png')} style={styles.image} />
+                <Image source={require('../images/golos_logo.png')} style={styles.image} />
                 <View style={styles.button}>
                     <Button onPress={this._openAuthorize} title="Авторизоваться" color="#FFFFFF" />
                 </View>
