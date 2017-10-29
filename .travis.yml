@@ -6,4 +6,5 @@ cache:
   - node_modules
 script:
   - npm update
+  - npm run build
   - npm run test
